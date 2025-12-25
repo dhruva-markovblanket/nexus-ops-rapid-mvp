@@ -1,0 +1,8 @@
+{
+  "name": "nexus ops v0.2",
+  "description": "A smart campus maintenance management system with role-based access (Student, Staff, Admin) and AI-powered ticket analysis.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

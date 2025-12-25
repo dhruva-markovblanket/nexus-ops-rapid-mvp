@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Ops - Campus Management</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Import Map for Environment Support -->
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "clsx": "https://esm.sh/clsx@^2.0.0",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@^2.1.0",
+    "axios": "https://esm.sh/axios@^1.13.2",
+    "express": "https://esm.sh/express@^5.2.1",
+    "cors": "https://esm.sh/cors@^2.8.5",
+    "helmet": "https://esm.sh/helmet@^8.1.0",
+    "pg": "https://esm.sh/pg@^8.16.3",
+    "dotenv": "https://esm.sh/dotenv@^17.2.3"
+  }
+}
+</script>
+    
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f1f1; }
+      .dark ::-webkit-scrollbar-track { background: #1f2937; }
+      ::-webkit-scrollbar-thumb { background: #c7c7cc; border-radius: 4px; }
+      .dark ::-webkit-scrollbar-thumb { background: #4b5563; }
+      ::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div id="root"></div>
+    <!-- Entry point pointing to the frontend directory -->
+    <script type="module" src="./frontend/index.tsx"></script>
+    <script>
+      // Global error handler for script loading failures
+      window.addEventListener('error', function(e) {
+        if (e.target && (e.target.tagName === 'SCRIPT' || e.target.tagName === 'LINK')) {
+           console.error('Resource failed to load:', e.target);
+           const root = document.getElementById('root');
+           if(root && root.innerHTML === '') {
+             root.innerHTML = '<div style="color:red; padding:20px;">Failed to load application resources. Please check your internet connection.</div>';
+           }
+        }
+      }, true);
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
