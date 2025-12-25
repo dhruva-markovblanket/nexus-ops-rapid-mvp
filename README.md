@@ -1,21 +1,41 @@
-# Sapthagiri NPS University - Campus Management System (Nexus Ops)
+# Nexus Ops – Rapid MVP
+
+This repository contains a **rapid, AI-assisted MVP** built to explore full-stack structure, feature flows, and basic system integration.
+
+The project uses a real university environment only as a **reference scenario**. It is **not an official system**, not production-ready, and not affiliated with any institution.
+
+
 
 ## Project Structure
 
-This repository is a monorepo-style structure containing both the client and server applications.
+This repository uses a monorepo-style structure with both backend and frontend applications.
 
-### /backend
-Node.js + Express + PostgreSQL.
-- **Source of Truth:** All business logic and data validation reside here.
-- **Architecture:** Layered (Router -> Controller -> Service -> Data Access Layer).
+### backend
+Node.js, Express, and PostgreSQL  
+Handles business logic, data validation, and REST APIs.
 
-### /frontend
-React + Vite + Tailwind CSS.
-- **Consumer:** Consumes REST APIs provided by the backend.
-- **Architecture:** Feature-based. Each major domain (Student, Faculty, Admin) has its own directory containing specific pages, components, and hooks.
+### frontend
+React, Vite, and Tailwind CSS  
+Consumes backend APIs and implements role-based flows.
 
-### /docs
-Architectural documentation and API contracts.
+### docs
+High-level notes and API references.
+
+
+
+## Status
+
+This is a **Rapid MVP**:
+- built quickly for experimentation and learning
+- expected to change or be discarded
+- not optimized for scale or security
+
+Long-term development happens in the main **Nexus Ops** repository.
+
+
+
+
+
 
 ## Getting Started
 
